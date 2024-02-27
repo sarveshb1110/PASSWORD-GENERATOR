@@ -4,21 +4,29 @@ import random
 
 characters=("abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()")
 
-password=" "
+password=""
 
 l=int(input("Please enter the length of password you want (1-8):"))
 
-
-    
-
-for i in range (l):
+for i in range(l):
     password+=random.choice(characters)
-    if l>8:
+
+    if l<8:
+            pass
+
+    else:
         print("You can only generate password of less than 8 digits ")
         break
-    else:
-        pass
+            
+    
+print(f"\nYour Password is {password}")
+    
+    
 
-    print("\nThis is your automatically generated Password")
-    print(password)
+
+
+    
+    
+    
+
 
